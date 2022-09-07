@@ -1,0 +1,30 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<ul class="messages message-color">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+<div class="row">
+    <div class="col-sm-6">
+        <img src="/static/support.jpg" alt="Avatar" class="imgheight">
+        <p class="sethelptext">Call:7750048275</p>
+        <p class="sethelptext">Email:sumanpatra68@gmail.com </p>
+    </div>
+        <div class="col-sm-6">
+            <button type="button" class="btn btn-secondary btn-block">Submit your feedback</button>
+            <form method="post" action="help">
+                {% csrf_token %}
+        
+                <div class="fonthelptext">{{ form.as_p }}</p>
+        
+                <div class="field">
+                    <div class="control center">
+                        <button class="btn btn-outline-dark">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    <div>
+{% endblock %}

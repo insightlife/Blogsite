@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<div class="row">
+    {% for post in posts %}
+        <div class="col-sm-4">
+            <img src="/media/{{post.article_img}}" alt="Avatar" class="logo">
+            <h5>{{ post.title }}</h5>
+            <p class="textdate">Posted at {{ post.date_added }}</p>
+            <p class="fontdate">{{ post.intro }}</p>
+            <a href="{% url 'post_detail' post.slug %}">Read more</a>
+            </div>
+    {% endfor %}
+    <div>
+{% endblock %}

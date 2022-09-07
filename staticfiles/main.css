@@ -1,0 +1,88 @@
+img{
+    border-radius:5px;
+}
+.headertext{
+    font-size: medium;
+}
+.coloring{
+    color: rgb(139, 30, 30);
+}
+.headingcolor{
+    color: rgb(140, 7, 25);
+    font-size: 30px;
+    font-weight: 600;
+}
+.setcolor{
+    font-size: larger;
+    color: rgb(21, 196, 138);
+    font-weight: 500;
+}
+.imageheight{
+width: 100%;
+height: 400px;
+}
+.imgheight{
+    width: 100%;
+    height: 350px;
+    }
+.sethelptext{
+    font-size: 20px;
+    color: rgb(154, 20, 20);
+    text-align: center;
+}
+.center{
+    text-align: center;
+}
+.message-color{
+    color: rgb(75, 184, 41);
+    list-style-position: inside;
+    font-size: larger;
+    text-align: center;
+}
+.fonthelptext{
+    font-size: 18px;
+}
+.textdate{
+    font-size: medium;
+}
+.fontdate{
+    font-size: medium;
+    font-weight: 600;
+}
+.ffontdate{
+    font-size: medium;
+}
+.bodytext{
+    font-size: large;
+}
+.introtext{
+    font-size: 25px;
+    font-weight: 500;
+}
+.commenttext{
+    font-size: large;
+}
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+.imageheight{
+    height: auto;
+    width: auto;
+}
+.setcolor{
+    font-size: large;
+}
+.sethelptext{
+    font-size: large;
+}
+.bodytext{
+    font-size: medium;
+}
+.introtext{
+    font-size: 20px;
+    font-weight: 500;
+}
+.headingcolor{
+    color: rgb(140, 7, 25);
+    font-size: 25px;
+    font-weight: 500;
+}
+}

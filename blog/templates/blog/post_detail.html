@@ -1,0 +1,68 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-8">
+    <h1 class="title headingcolor">{{ post.title }}</h1>
+
+    <p class="headertext">Posted at {{ post.date_added }}</p>
+
+    <img src="/media/{{post.article_img}}" alt="Avatar" class="imageheight" />
+
+    <p class="introtext">{{ post.intro }}</h4>
+
+    <p class="bodytext">{{ post.body }}</p>
+
+    <hr>
+
+    <h2 class="subtitle">Comments</h2>
+
+    {% for comment in post.comments.all %}
+        <article class="media">
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <span class="commenttext">{{ comment.name }}</span> <small class="ffontdate">{{ comment.date_added }}</small>
+                        <br>
+                        {{ comment.body }}
+                    </p>
+                </div>
+            </div>
+        </article>
+    {% empty %}
+        <div class="notification">
+            <p>No comments yet!</p>
+        </div>
+    {% endfor %}
+
+    <hr>
+
+    <h2 class="subtitle setcolor">Add comment</h2>
+
+    <form method="post" action="." class="form-group">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <div class="field">
+            <div class="control">
+                <button class="button is-success">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="col-sm-4">
+    <h3 class="coloring">Related Post</h3>
+    {% for po in npost %}
+    {% if po.slug != post.slug %}
+        <img src="/media/{{po.article_img}}" alt="Avatar" class="logo">
+        <h5>{{ po.title }}</h5>
+        <p class="textdate">Posted at {{ po.date_added }}</p>
+        <p class="fontdate">{{ po.intro }}</p>
+        <a href="{% url 'post_detail' po.slug %}">Read more</a>
+            {%endif%}
+    {% endfor %}
+
+    <hr>
+</div>
+{% endblock %}
