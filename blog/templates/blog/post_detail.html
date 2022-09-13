@@ -4,19 +4,12 @@
 <div class="row">
     <div class="col-sm-8">
     <h1 class="title headingcolor">{{ post.title }}</h1>
-
     <p class="headertext">Posted at {{ post.date_added }}</p>
-
     <img src="/media/{{post.article_img}}" alt="Avatar" class="imageheight" />
-
     <p class="introtext">{{ post.intro }}</h4>
-
     <p class="bodytext">{{ post.body }}</p>
-
     <hr>
-
     <h2 class="subtitle">Comments</h2>
-
     {% for comment in post.comments.all %}
         <article class="media">
             <div class="media-content">
@@ -34,16 +27,11 @@
             <p>No comments yet!</p>
         </div>
     {% endfor %}
-
     <hr>
-
     <h2 class="subtitle setcolor">Add comment</h2>
-
     <form method="post" action="." class="form-group">
         {% csrf_token %}
-
         {{ form.as_p }}
-
         <div class="field">
             <div class="control">
                 <button class="button is-success">Submit</button>
@@ -62,7 +50,6 @@
         <a href="{% url 'post_detail' po.slug %}">Read more</a>
             {%endif%}
     {% endfor %}
-
     <hr>
 </div>
 {% endblock %}
