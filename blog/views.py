@@ -31,28 +31,28 @@ def post_detail(request, slug):
         form = CommentForm()
     return render(request, 'blog/post_detail.html', {'post': post, 'form': form,'npost':npost})
 
-def technical(request):
-    posts = Post.objects.filter(field='technical').values()
+def technology(request):
+    posts = Post.objects.filter(field='technology').values()
     print(posts)
     return render(request, 'blog/frontpage.html', {'posts': posts})
 
-def hotpost(request):
-    posts = Post.objects.filter(field='hot').values()
+def djangotopic(request):
+    posts = Post.objects.filter(field='django').values()
     print(posts)
     return render(request, 'blog/frontpage.html', {'posts': posts})
 
-def entertainment(request):
-    posts = Post.objects.filter(field='entertainment').values()
+def python(request):
+    posts = Post.objects.filter(field='python').values()
     print(posts)
     return render(request, 'blog/frontpage.html', {'posts': posts})
 
-def science(request):
-    posts = Post.objects.filter(field='science').values()
+def software(request):
+    posts = Post.objects.filter(field='software').values()
     print(posts)
     return render(request, 'blog/frontpage.html', {'posts': posts})
 
-def lifehacks(request):
-    posts = Post.objects.filter(field='lifehack').values()
+def testing(request):
+    posts = Post.objects.filter(field='testing').values()
     print(posts)
     return render(request, 'blog/frontpage.html', {'posts': posts})
 

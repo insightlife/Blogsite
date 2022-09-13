@@ -3,17 +3,17 @@ from django.urls import path
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
-from blog.views import frontpage, post_detail,technical,subscribe,hotpost,lifehacks,science,entertainment,help
+from blog.views import frontpage, post_detail,technology,subscribe,testing,djangotopic,software,python,help
 
 urlpatterns = [
     path('', frontpage, name='frontpage'),
     path('admin/', admin.site.urls),
     path('see/<slug:slug>/', post_detail, name='post_detail'),
-    path('technical_blog',technical),
-    path('story',hotpost),
-    path('entertainment',entertainment),
-    path('lifehacks',lifehacks),
-    path('science',science),
+    path('technology',technology),
+    path('django',djangotopic),
+    path('python',python),
+    path('software',software),
+    path('testing',testing),
     path('subscribe',subscribe),
     path('help',help),
 ]
