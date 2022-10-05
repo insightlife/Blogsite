@@ -8,7 +8,7 @@ SECRET_KEY = 'django-insecure-1pf41js4ch36m9e!$_j%2iis*z+^di48x0j!$n7t-jycm13m29
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['sumanblog.herokuapp.com','127.0.0.1','bloggingsuman.herokuapp.com','www.shiningcat.in']
+ALLOWED_HOSTS = ['sumanblog.herokuapp.com','127.0.0.1','bloggingsuman.herokuapp.com','blog.shiningcat.in']
 
 INSTALLED_APPS = [
     'blog',
